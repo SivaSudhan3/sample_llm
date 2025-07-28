@@ -6,10 +6,15 @@ on:
     branches: [main]
 jobs:
   build:
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - name: push code
       uses: actions/checkout@v3
+    - name: checkout success
+      run : |
+        echo "✅ Checked out code"
+        ls -la
+        
     - name: setup docker buildx
       uses: docker/setup-buildx-action@v3
     - name: Login to dockerhub
