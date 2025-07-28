@@ -1,9 +1,9 @@
 name : sample build
 on:
   push:
-  branches: [ main ]
+    branches: [main]
   pull_request:
-  branches: [main]
+    branches: [main]
 jobs:
   build:
     runs_on: unbuntu-latest
